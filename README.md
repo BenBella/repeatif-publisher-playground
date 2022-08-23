@@ -3,7 +3,7 @@ I tried to implement repeat if with delay custom publisher for Swift Combine. It
 
 # I was able to implement desired functionality with different approach:
 
-`code`
+code'
 func retryRequestWithDelay(url: URL) -> AnyPublisher<Response>, AppError> {
         let pollPublisher = CurrentValueSubject<Int, AppError>(0)
         return pollPublisher.compactMap { [weak self] delay in
